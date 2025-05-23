@@ -28,13 +28,12 @@ function App() {
             Welcome, user!
           </p>
         ) : (
-<form onSubmit={validateForm}>
-  {error && <p>{error}</p>}
-        <label>Username:    
-          <input 
+        <form onSubmit={validateForm}>
+        {error && <p>{error}</p>}
+        <label>Username:
+          <input  
             type = 'text' 
-            placeholder='username'
-            value = {username}  
+            placeholder='username' 
             onChange={(e)=>setUsername(e.target.value)}
             required
           />
@@ -42,15 +41,14 @@ function App() {
         <br/>
         <label>Password:
           <input 
-            type='text'
+            type='password'
             placeholder='password'
-            value={password}
             onChange={(e)=>setPassword(e.target.value)}
             required  
           />
         </label>
         <br/>
-        <button onSubmit={validateForm}>Submit</button> 
+        <button >Submit</button> 
       </form>
         )
       }
