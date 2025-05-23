@@ -30,25 +30,27 @@ function App() {
         ) : (
         <form onSubmit={validateForm}>
         {error && <p>{error}</p>}
-        <label>Username:
-          <input  
+        <label>
+          Username:
+        </label>
+        <input
             type = 'text' 
             placeholder='username' 
             onChange={(e)=>setUsername(e.target.value)}
             required
           />
-        </label>
         <br/>
-        <label>Password:
+        <label>
+          Password:
+        </label>
           <input 
             type='password'
             placeholder='password'
             onChange={(e)=>setPassword(e.target.value)}
             required  
           />
-        </label>
         <br/>
-        <button >Submit</button> 
+        <button type='submit' >Submit</button> 
       </form>
         )
       }
